@@ -1,0 +1,23 @@
+.error {
+    display: none;
+}
+
+.ffinput-aa, .ffinput-ac { transition: 0.5s; }
+.ffinput-div:hover > .ffinput-aa, .ffinput:focus ~ .ffinput-aa {
+    opacity: 0;
+}
+.ffinput-div:hover > .ffinput-ac, .ffinput:focus ~ .ffinput-ac {
+    opacity: 1;
+}
+
+.fields-wraper[data-error=true] > .error, 
+.fields-time-wraper[data-error=true] > .error {
+    display: block;
+    color: var(--clr-prim-1);
+    font-size: 0.875rem; /* 14px */
+    font-weight: var(--fw-medium);
+}
+.fields-wraper[data-error=true] .ffinput-aa, 
+.warning[data-error=true] .ffinput-aa {
+    background-color: var(--clr-prim-1);
+}
